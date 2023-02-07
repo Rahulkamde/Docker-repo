@@ -1,10 +1,12 @@
 apiVersion: v1
-kind: service
+kind: Pod
 metadata:
-  name: nginx-service
-spec:
-  containers:
+  name: nginx 
+  labels: 
+    mylabelname: proxy
+spec: 
+  containers: 
     - name: nginx
       image: nginx:1.14.2
       ports: 
-      - containerPort: 80
+      - containerPort: 80  
