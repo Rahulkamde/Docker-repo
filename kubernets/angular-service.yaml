@@ -4,11 +4,11 @@ metadata:
   name: service-for-angularweb
 spec:
   type: LoadBalancer
-  selector: 
+  selector:
     app: webapp
-  ports:
+  ports: 
     - name: angularweb-server
       protocol: TCP
       port: 80
-      targetPort: 80
-          
+      targetPort: 80   
+  
