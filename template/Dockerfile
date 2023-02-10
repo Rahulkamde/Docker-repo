@@ -8,4 +8,4 @@ RUN ls .
 Run unzip cycle.zip
 RUN mv cycle.zip/* /var/www/html/
 EXPOSE 80
-CMD ["nginx", "-g" "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
