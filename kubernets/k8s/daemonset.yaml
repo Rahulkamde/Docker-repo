@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: image-daemon-set
+  namespace: fluentd
+spec:
+  selector:
+    matchLabels:
+      mylabelsname: webapp4
+  # replicas: 3
+  template: # it will define a pode
+    metadata: 
+      name: image-daemon-set
+      labels:
+        mylabelsname: webapp4
+    spec:    
+      containers:
+      - name: webapp
+        image: rahulkamde/ubuntu

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-deployment 
+  namespace: fleetman
+spec: 
+  selector: 
+    matchLabels: 
+      mylabelsname: webapp2
+  replicas: 3      
+  template: # it will define a pods
+    metadata: 
+      name: webapp
+      labels:
+        mylabelsname: webapp2
+    spec: 
+      containers:
+      - name: webapp
+        image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+        

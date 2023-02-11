@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: angular-web
   labels: 
-    app: webapp
+    app: webapp1
 spec:
   containers:
   - name: fleetman

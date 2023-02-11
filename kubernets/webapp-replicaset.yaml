@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: replica-set-image
+  labels:
+    mylabelsname: webapp3
+spec:
+  selector:
+    matchLabels:
+      mylabelsname: webapp3
+  replicas: 3
+  template: # it will define the pods
+    metadata:
+      name: webapp3
+      labels: 
+        mylabelsname: webapp3
+    spec: 
+      containers:
+      - name: replica-set-image
+        image: rahulkamde/ubuntu          
+        
